@@ -44,10 +44,10 @@ const respuesta = caches.keys()
             keys.forEach( key => {
                 if (key !== STATIC && key.includes('static')) {
                     return caches.delete(key)}
+                    if (key !== DYNAMIC && key.includes('dynamic') ) {
+                        return caches.delete(key);
+                    }
                 })
-                if (  key !== DYNAMIC && key.includes('dynamic') ) {
-                return caches.delete(key);
-            }
         })
 
     e.waitUntil(respuesta);
