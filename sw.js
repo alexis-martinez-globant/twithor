@@ -5,7 +5,7 @@ const DYNAMIC = 'dynamic-1';
 const INMUTABLE = 'inm-1';
 
 const APP_SHELL = [
-    '/',
+    // '/',
     'index.html',
     'js/app.js',
     'js/sw-utils.js',
