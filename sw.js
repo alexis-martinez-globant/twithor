@@ -1,7 +1,7 @@
 importScripts('js/sw-utils.js');
 
-const STATIC = 'static-1';
-const DYNAMIC = 'dynamic-1';
+const STATIC = 'static-4';
+const DYNAMIC = 'dynamic-2';
 const INMUTABLE = 'inm-1';
 
 const APP_SHELL = [
@@ -45,6 +45,9 @@ const respuesta = caches.keys()
                 if (key !== STATIC && key.includes('static')) {
                     return caches.delete(key)}
                 })
+                if (  key !== DYNAMIC && key.includes('dynamic') ) {
+                return caches.delete(key);
+            }
         })
 
     e.waitUntil(respuesta);
